@@ -1,59 +1,47 @@
-<!--<% if @user.errors.any? %>
-	 <div id="error_explanation">
-		<h2>Não foi possível completar a ação. Erro: </h2>
-		<ul>
-			<% @user.errors.full_messages.each do |message| %>
-			<li><%= message %></li>
-			<% end %>
-		</ul>
+<% if @user.errors.any? %>
+	<div id="error_explanation">
+		Há erros no formulário, por favor verifique.
 	</div>
-<% end %> -->
+<% end %>
 
 <%= form_for @user do |f| %>
 	<p>
 		<%= f.label :full_name %>
 		<%= f.text_field :full_name %>
-		<% if @user.errors.has_key? :full_name %>
-			<div class="error_message">
-				<%= @user.errors[:full_name].first %>
-			</div>
-		<% end %>
+		<%= error_tag @user, :full_name %>
 	</p>
 
 	<p>
 		<%= f.label :location %>
 		<%= f.text_field :location %>
-		<% if @user.errors.has_key? :location %>
-		<div class="error_message">
-			<%= @user.errors.has_key? :location %>
-		</div>
-		<% end %>
+		<%= error_tag @user, :location %>
 	</p>
 
 	<p>
 		<%= f.label :email %>
 		<%= f.text_field :email %>
-		<% if @user.errors.has_key? :email %>
-		<div class="error_message">
-			<%= @user.errors.has_key? :email %>
-		</div>
-		<% end %>
+		<%= error_tag @user, :email %>
 	</p>
 
 	<p>
 		<%= f.label :password %>
 		<%= f.password_field :password %>
+		<%= error_tag @user, :password %>
 	</p>
+
 	<p>
 		<%= f.label :password_confirmation %>
 		<%= f.password_field :password_confirmation %>
+		<%= error_tag @user, :password_confirmation %>
 	</p>
+
 	<p>
 		<%= f.label :bio %>
 		<%= f.text_area :bio %>
+		<%= error_tag @user, :bio %>
 	</p>
+
 	<p>
 		<%= f.submit %>
 	</p>
-
 <% end %>
