@@ -1,4 +1,4 @@
-COLCHO.NET
+##COLCHO.NET
 
 Colcho.net é uma aplicação que construímos no livro Ruby On Rails: Coloque sua aplicação web nos trilho, com a finalidade de aprender o máximo possivel dessa fantastica linguagem de programação.
 
@@ -6,6 +6,6 @@ Recomendo o livro demais, pois é uma visão totalmente diferente de qualquer fr
 Já está pronta pra uso?
 
 Aplicação ainda está em fase de desenvolvimento, mas clonando a aplicação, você já pode vê-la rodando 100%.
-Funcionalidades
 
-Atualmente as funcionalidades existentes incluem:
+
+[![Code Climate](https://codeclimate.com/github/Nicacioneto/colchonet/badges/gpa.svg)](https://codeclimate.com/github/Nicacioneto/colchonet)
