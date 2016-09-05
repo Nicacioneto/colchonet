@@ -1,0 +1,7 @@
+language: ruby
+
+notifications:
+  email:
+    recipients:
+      - nicacionetobsb@gmail.com
+    on_success: always
